@@ -1,0 +1,27 @@
+body.light {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+body.light .profile-card,
+body.light .sidebar,
+body.light .chart-box {
+  background: rgba(255, 255, 255, 0.8);
+  color: #0f172a;
+}
+
+body.light a.linked {
+  color: #1e293b;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+}
+
+body.dark .profile-card,
+body.dark .sidebar,
+body.dark .chart-box {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5f5;
+}

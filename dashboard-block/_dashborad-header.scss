@@ -1,0 +1,122 @@
+.main {
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.sidebar {
+    position: relative;
+    width: 260px;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.sidebar h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    color: #cbd5f5;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #38bdf8;
+}
+
+.dashboard-container {
+    flex: 1;
+    padding: 40px;
+    color: #fff;
+}
+
+.dashboard-container h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-block {
+    flex: 1;
+    min-width: 220px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    transition: all 0.5s ease;
+}
+
+.stat-block:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.4);
+}
+
+.stat-block h2 {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.stat-block p {
+    font-size: 36px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.logout {
+    position: absolute;
+    bottom: 15px;
+    width: 80%;
+    height: 35px;
+    background-color: red;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    align-self: center;
+    justify-self: center;
+    transition: all 0.6s ease;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(255, 0, 0, 0.377);
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        display: none;
+    }
+
+    .dashboard-container {
+        padding: 20px;
+    }
+
+    .dashboard-container h1 {
+        font-size: 24px;
+    }
+
+    .stat-block p {
+        font-size: 28px;
+    }
+}

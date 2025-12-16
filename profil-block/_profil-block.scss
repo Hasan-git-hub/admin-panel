@@ -1,0 +1,201 @@
+.profile-main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  height: 490px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  animation: cardEntrance 1s ease-out forwards;
+  transition: all 0.5s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+.profile-card h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #cbd5f5;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards 0.3s;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-name,
+.info-pass {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.info-name:nth-child(1),
+.info-pass:nth-child(1) {
+  animation: slideUp 0.6s ease forwards 0.6s;
+}
+
+.info-name:nth-child(2),
+.info-pass:nth-child(2) {
+  animation: slideUp 0.6s ease forwards 0.8s;
+}
+
+.info-name:hover,
+.info-pass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.info-name span,
+.info-pass span {
+  font-size: 18px;
+  color: #94a3b8;
+}
+
+.info-name p,
+.info-pass p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.logout-1,
+.edit {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 45px;
+  background-color: red;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards 1s;
+  bottom: -20px;
+  margin-top: 5px;
+}
+
+.logout:hover,
+.edit:hover {
+  background: rgba(255, 0, 0, 0.377);
+  transform: scale(1.05);
+}
+.edit {
+  background-color: #3370f5;
+}
+.edit:hover {
+  background: rgba(51, 112, 245, 0.377);
+}
+.edit-inp {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  background-color: transparent;
+  color: #fff;
+}
+.exit {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 45px;
+  background-color: rgb(253, 142, 51);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards 1s;
+  bottom: -20px;
+  margin-top: 5px;
+}
+.exit:hover {
+  background-color: rgba(253, 142, 51, 0.432);
+  transform: scale(1.05);
+}
+@keyframes cardEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-card {
+    padding: 30px 20px;
+  }
+
+  .profile-card h1 {
+    font-size: 24px;
+  }
+
+  .info-row span,
+  .info-row p {
+    font-size: 16px;
+  }
+
+  .logout {
+    height: 40px;
+    font-size: 14px;
+  }
+}

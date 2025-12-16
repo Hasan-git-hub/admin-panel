@@ -1,0 +1,105 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgb(21, 15, 73)
+  );
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(126, 126, 126, 0.432);
+  backdrop-filter: blur(10px);
+  border-radius: 32px;
+  padding: 70px 70px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  transition: all 0.8s ease;
+  animation: box 0.8s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    transform: translateY(-30px) scale(1.02);
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.username,
+.password {
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+.username:focus,
+.password:focus {
+  outline: none;
+  border: 1px groove #ffffff;
+  color: rgb(255, 255, 255);
+}
+
+.submit {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #3370f567;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.submit:hover {
+  background: #3370f567;
+}
+.singing-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #ff0000a2;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+.error-message {
+  text-align: center;
+  font-size: 13px;
+  color: red;
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 0 15px;
+    padding: 25px 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
+@keyframes box {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

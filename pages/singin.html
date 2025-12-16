@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign up</title>
+    <link rel="stylesheet" href="/style/style.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <form id="loginForm">
+          <h2 class="title">sing up</h2>
+          <input
+            name="username"
+            class="username"
+            type="text"
+            value="derek"
+            placeholder="Username"
+            required
+          />
+          <input
+            name="password"
+            class="password"
+            type="password"
+            value="jklg*_56"
+            placeholder="Password"
+            required
+          />
+          <button class="submit" type="submit">sign up</button>
+          <button class="singing-btn" type="button">loging</button>
+          <p id="errorMessage" class="error-message"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/util/singin.js"></script>
+  </body>
+</html>
