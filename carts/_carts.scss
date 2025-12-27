@@ -1,0 +1,61 @@
+.carts {
+  background: rgba(255, 255, 255, 0.75); // yarim shaffof oq
+  backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &-id {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+
+  &-userId {
+    font-size: 14px;
+    color: #6b7280;
+  }
+
+  &-date {
+    font-size: 13px;
+    color: #374151;
+    white-space: nowrap;
+  }
+}
+.carts-product {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 55px;
+  align-items: center;
+  height: auto;
+
+  padding: 24px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+.product-card {
+  height: auto;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
